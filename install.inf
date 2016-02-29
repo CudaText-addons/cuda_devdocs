@@ -1,0 +1,15 @@
+[info]
+title=DevDocs
+desc=Performs search on DevDocs site
+type=cudatext-plugin
+subdir=cuda_devdocs
+
+[item1]
+section=commands
+caption=DevDocs\Search by input
+method=run_input
+
+[item2]
+section=commands
+caption=DevDocs\Search by text
+method=run_text
