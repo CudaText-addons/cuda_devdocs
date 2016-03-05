@@ -3,6 +3,7 @@ title=DevDocs
 desc=Performs search on DevDocs site
 type=cudatext-plugin
 subdir=cuda_devdocs
+homepage=https://github.com/CudaText-addons/cuda_devdocs
 
 [item1]
 section=commands
