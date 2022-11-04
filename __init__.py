@@ -1,3 +1,4 @@
+import os
 from cudatext import *
 from .proc_word import *
 
