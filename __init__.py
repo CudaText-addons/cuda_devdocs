@@ -1,11 +1,23 @@
 from cudatext import *
 from .proc_word import *
-import webbrowser
+
+def safe_open_url(url):
+    '''
+    On Windows 10, app crashes when webbrowser.open* is called with running LSP server.
+    '''
+    if os.name=='nt':
+        import subprocess
+        subprocess.Popen(['start', url], shell=True)
+    else:
+        import webbrowser
+        webbrowser.open_new_tab(url)
+
 
 def do_search(text):
     url = 'http://devdocs.io/#q=' + text.replace(' ', '%20')
-    webbrowser.open_new_tab(url)
+    safe_open_url(url)
     msg_status('DevDocs: opened browser for "' + text + '"')
+
 
 class Command:
     def run_input(self):
